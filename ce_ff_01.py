@@ -120,14 +120,17 @@ if __name__ == "__main__":
     #for fn in in_fns[1:]:
     
     while(1):
-        fn = in_fns[iii]
-        print fn
+        #if (not (fromCam or fromVideo)):
+        #    fn = in_fns[iii]
+        #    print fn
         # get new frame
         if fromCam or fromVideo:
             ret, frame = video.read()
             if ret==False:
                 break
         else:
+            fn = in_fns[iii]
+            print fn
             frame = cv2.imread(fn, cv2.IMREAD_UNCHANGED)
         # grayscale
         frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
