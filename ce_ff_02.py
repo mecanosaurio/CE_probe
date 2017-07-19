@@ -169,6 +169,7 @@ if __name__ == "__main__":
                 iii+=1
             else:
                 cv2.imwrite(fn.replace(args["in_dir"], args["out_dir"]), img)
+		iii+=1
             all_angles.append(new_angles)
         # wait
         #if (not fromCam and not fromVideo):
